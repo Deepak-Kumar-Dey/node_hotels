@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 const db = require('./db');
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3000
 
 
 const bodyParser = require('body-parser');
@@ -13,7 +16,7 @@ const Task = require('./models/Task')
 
 
 
-app.listen(3000, ()=> {
+app.listen(PORT, ()=> {
   console.log('Server is running on Port 3000')
 })
 app.get('/', (req, res) => {
