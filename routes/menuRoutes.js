@@ -35,7 +35,7 @@ router.get('/',async(req,res)=>{
 
 router.get('/:tasteType', async(req,res)=>{
    try{
-       const tasetType = req.params.tasteType
+       const tasteType = req.params.tasteType
        if(tasteType == 'Sweet' || tasteType == 'Spicy' || tasteType == 'Sour' || tasteType == 'Creamy'){
 
           const response = await MenuItem.find({taste : tasteType})
